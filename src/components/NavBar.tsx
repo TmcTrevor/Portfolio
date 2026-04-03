@@ -81,6 +81,14 @@ export default function Navbar() {
             )
           })}
 
+          <a
+            href="/cv/Mohamed_Khames_CV.pdf"
+            download="Mohamed_Khames_CV.pdf"
+            className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-bold rounded-lg transition-colors border border-white/10 flex items-center gap-1"
+          >
+            <span className="material-symbols-outlined text-sm">file_download</span>
+            CV
+          </a>
           <Link
             to="/"
             hash="contact"
@@ -155,6 +163,14 @@ export default function Navbar() {
               )
             })}
 
+            <a
+              href="/cv/Mohamed_Khames_CV.pdf"
+              download="Mohamed_Khames_CV.pdf"
+              className="px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-200 hover:bg-white/5 hover:text-primary flex items-center gap-2"
+            >
+              <span className="material-symbols-outlined text-sm">file_download</span>
+              Download CV
+            </a>
             <Link
               to="/"
               hash="contact"
