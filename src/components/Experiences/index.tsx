@@ -7,83 +7,57 @@ import AcademicCard from './AcademicCard'
 const EXPERIENCES: Experience[] = [
   {
     id: 'exp-1',
-    dateLabel: '2022 – Present',
-    title: 'Senior Software Engineer',
-    company: 'TechGlobal Inc.',
+    dateLabel: 'Nov 2022 – Dec 2025',
+    title: 'Senior Software Engineer & Product Owner',
+    company: 'TickTickTrader',
     roleType: 'Full-time',
     keyImpactIcon: 'rocket_launch',
     keyImpactTone: 'primary',
     keyImpact: (
       <>
-        Reduced server costs by{' '}
-        <span className="text-white font-bold">30%</span> while scaling
-        infrastructure to support{' '}
-        <span className="text-white font-bold">1M+</span> daily active users.
+        Designed and shipped a real-time payments API from scratch, handling
+        webhook processing, queue-based architecture, and live data streams for
+        fintech clients.
       </>
     ),
     groups: [
       {
         icon: 'architecture',
-        title: 'Architecture & Performance',
+        title: 'Product & Architecture',
         bullets: [
-          'Led migration of legacy monolith to microservices using Node.js & Docker.',
-          'Optimized system latency by 40% via strategic Redis caching implementation.',
+          'Led product design and development of a real-time API with webhook integrations, Redis queues, and WebSocket support.',
+          'Architected scalable system using Node.js, PostgreSQL, and event-driven patterns for payment processing.',
+          'Implemented Server-Sent Events (SSE) and Bull queues for reliable, asynchronous transaction handling.',
         ],
       },
       {
-        icon: 'group',
-        title: 'Leadership',
+        icon: 'code',
+        title: 'Full-Stack Development (First 2 Years)',
         bullets: [
-          'Mentored 3 junior developers and established code review standards.',
+          'Built and deployed trading dashboards and internal APIs serving multiple client requirements.',
+          'Developed responsive frontend interfaces paired with robust backend APIs for real-time data visualization.',
         ],
       },
     ],
   },
   {
     id: 'exp-2',
-    dateLabel: '2020 – 2022',
-    title: 'Full Stack Developer',
-    company: 'Creative Solutions Agency',
-    roleType: 'Full-time',
+    dateLabel: '2019 – 2021',
+    title: 'Freelance Full-Stack Developer',
+    company: 'Self-Employed',
+    roleType: 'Freelance',
     keyImpactIcon: 'bolt',
     keyImpactTone: 'blue',
     keyImpact: (
       <>
-        Delivered <span className="text-white font-bold">15+</span>{' '}
-        high-performance client projects with a{' '}
-        <span className="text-white font-bold">100%</span> on-time delivery
-        rate.
-      </>
-    ),
-    groups: [
-      {
-        icon: 'code',
-        title: 'Development',
-        bullets: [
-          'Built responsive websites using React, Next.js, and headless CMS.',
-          'Translated Figma prototypes into pixel-perfect interactive UI components.',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'exp-3',
-    dateLabel: 'Summer 2019',
-    title: 'Junior Developer Intern',
-    company: 'StartUp X',
-    roleType: 'Internship',
-    keyImpactIcon: 'trending_up',
-    keyImpactTone: 'muted',
-    keyImpact: (
-      <>
-        Accelerated feature deployment cycles by{' '}
-        <span className="text-white font-bold">20%</span> through automated
-        testing scripts.
+        Built client websites and Discord bots with external API integrations,
+        managing end-to-end development and deployment.
       </>
     ),
     bullets: [
-      'Assisted in building RESTful APIs using Python Flask.',
-      'Wrote unit tests achieving 85% code coverage.',
+      'Developed responsive websites and custom Discord bots using Node.js and PostgreSQL.',
+      'Integrated external APIs and built automation tools for client-specific workflows.',
+      'Managed full project lifecycle from requirement gathering to deployment and support.',
     ],
   },
 ]
@@ -91,19 +65,19 @@ const EXPERIENCES: Experience[] = [
 const ACADEMIC: Academic[] = [
   {
     id: 'edu-1',
-    dateLabel: '2020 - 2022',
-    badge: 'Parallel to Internship',
-    degree: 'M.S. Computer Science',
-    school: 'Stanford University',
-    note: 'Specialization in AI & Distributed Systems',
+    dateLabel: '2019 – 2025',
+    badge: 'Parallel to Work',
+    degree: 'Advanced Computer Science Training',
+    school: '1337 School (42 Network)',
+    note: 'Common Core + Phase 2 Curriculum',
     icon: 'school',
   },
   {
     id: 'edu-2',
-    dateLabel: '2016 - 2020',
-    degree: 'B.S. Software Engineering',
-    school: 'University of Technology',
-    note: 'Graduated with Honors',
+    dateLabel: 'Sept 2017 – July 2021',
+    degree: 'B.S. Mathematics & Computer Science',
+    school: 'Hassan II University',
+    note: 'Casablanca, Morocco',
     icon: 'book',
   },
 ]
@@ -129,6 +103,7 @@ export default function Experiences() {
               exp={exp}
               isActive={idx === 0}
               dateTone={idx === 0 ? 'primary' : 'muted'}
+              position={idx % 2 === 0 ? 'right' : 'left'}
             />
           ))}
         </div>

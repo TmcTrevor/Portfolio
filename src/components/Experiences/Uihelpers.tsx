@@ -13,7 +13,7 @@ export function SectionTitle({ step, title }: { step: string; title: string }) {
 
 export function TimelineRail() {
   return (
-    <div className="absolute left-6 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary/20 to-transparent hidden md:block" />
+    <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary/20 to-transparent" />
   )
 }
 
