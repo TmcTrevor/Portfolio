@@ -52,7 +52,7 @@ const CATEGORIES: Category[] = [
     headerIcon: 'dns',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Node.js (Express, NestJS)',
         level: 'Strong',
         icon: (
           <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ const CATEGORIES: Category[] = [
         ),
       },
       {
-        name: 'Python',
+        name: 'Python (FastAPI)',
         level: 'Comfortable',
         icon: (
           <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -71,6 +71,11 @@ const CATEGORIES: Category[] = [
             />
           </svg>
         ),
+      },
+      {
+        name: 'Java (Spring Boot, Micronaut)',
+        level: 'Comfortable',
+        icon: <span className="font-bold text-xs">J</span>,
       },
       {
         name: 'REST APIs',
@@ -145,17 +150,21 @@ const CATEGORIES: Category[] = [
 ]
 
 const SECONDARY: Skill[] = [
-  { name: 'Vue.js', level: 'Working Knowl.', icon: 'code' },
-  { name: 'Firebase', level: 'Comfortable', icon: 'data_object' },
+  // { name: 'NestJS', level: 'Strong', icon: 'code' },
+  { name: 'Angular', level: 'Comfortable', icon: 'web' },
+  { name: 'Oracle DB', level: 'Comfortable', icon: 'storage' },
+  { name: 'Git', level: 'Strong', icon: 'merge' },
   { name: 'Shell', level: 'Comfortable', icon: 'terminal' },
   { name: 'Figma', level: 'Occasional', icon: 'palette' },
+  { name: 'Agile', level: 'Comfortable', icon: 'sprint' },
 ]
 
 const LEARNING = [
   'System Design',
-  'Distributed Systems',
-  'Rust',
-  'AI/ML Models',
+  'AWS Certifications',
+  'GCP Cloud Platform',
+  'AI Agents & LLM Integration',
+  'Kubernetes & Orchestration',
 ]
 
 export default function TechSkill() {
