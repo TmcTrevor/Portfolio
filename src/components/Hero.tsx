@@ -16,16 +16,17 @@ const Hero = () => {
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl text-left font-bold leading-[1.1] tracking-tight">
-            Crafting Robust{' '}
+            Full-Stack Engineer Specializing in{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-indigo-400">
-              Software Solutions
+              High-Performance APIs
             </span>{' '}
-            that Drive Innovation and Impact.
+            and Real-Time Systems
           </h1>
           <p className="text-lg md:text-xl text-left text-slate-400 max-w-xl leading-relaxed">
-            I’m a Full-Stack Engineer focused on building scalable architectures
-            and intuitive user experiences — turning complex challenges into
-            clean, maintainable code.
+            3+ years building production systems with Node.js, Java, and
+            microservices architecture. Currently focused on distributed systems,
+            real-time data pipelines, and cloud infrastructure. I ship code that
+            scales.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a
@@ -42,6 +43,16 @@ const Hero = () => {
               href="#contact"
             >
               Get in Touch
+            </a>
+            <a
+              className="px-6 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg transition-all flex items-center gap-2 border border-white/10 hover:-translate-y-1"
+              href="/cv/Mohamed_Khames_CV.pdf"
+              download="Mohamed_Khames_CV.pdf"
+            >
+              <span className="material-symbols-outlined text-sm">
+                file_download
+              </span>
+              Download CV
             </a>
           </div>
         </div>
@@ -67,7 +78,7 @@ const Hero = () => {
                     Current Focus
                   </p>
                   <p className="text-sm font-bold text-white">
-                    Distributed Systems &amp; Scalability
+                    Microservices Architecture &amp; Cloud Infrastructure
                   </p>
                 </div>
               </div>
