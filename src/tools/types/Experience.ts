@@ -1,4 +1,4 @@
-export type RoleType = 'Full-time' | 'Internship' | 'Part-time'
+export type RoleType = 'Full-time' | 'Internship' | 'Part-time' | 'Freelance'
 
 export type BulletGroup = {
   icon: string // material-symbols-outlined
