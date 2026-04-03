@@ -3,13 +3,15 @@ import type { Project } from '@/tools/types/project'
 function CompactProjectRow({ p }: { p: Project }) {
   return (
     <div className="group relative bg-surface-lighter/50 rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-300 flex items-center p-4 gap-6 hover:bg-surface-lighter">
-      <div className="w-32 h-24 shrink-0 rounded-lg overflow-hidden relative hidden sm:block">
-        <img
-          alt={p.image.alt}
-          className="w-full h-full object-cover"
-          src={p.image.src}
-        />
-      </div>
+      {p.image ? (
+        <div className="w-32 h-24 shrink-0 rounded-lg overflow-hidden relative hidden sm:block">
+          <img
+            alt={p.image.alt}
+            className="w-full h-full object-cover"
+            src={p.image.src}
+          />
+        </div>
+      ) : null}
 
       <div className="grow">
         <div className="flex justify-between">

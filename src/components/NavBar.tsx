@@ -17,13 +17,14 @@ export default function Navbar() {
   const [open, setOpen] = React.useState(false)
 
   // TanStack Router current location (works with file-based routing)
-  const location = useRouterState({ select: (s) => s.location })
-  const activeHash = (location.hash || '').replace('#', '')
+  const pathname = useRouterState({ select: (s) => s.location.pathname })
+  const hash = useRouterState({ select: (s) => s.location.hash })
+  const activeHash = (hash || '').replace('#', '')
 
   // Close mobile menu on navigation (including hash changes)
   React.useEffect(() => {
     setOpen(false)
-  }, [location.pathname, location.hash])
+  }, [pathname, hash])
 
   // ESC to close
   React.useEffect(() => {
