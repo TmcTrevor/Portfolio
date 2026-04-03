@@ -16,34 +16,41 @@ const AboutMe = () => {
               <span className="text-slate-200 font-medium border-b border-primary/50">
                 Full-Stack Engineer
               </span>{' '}
-              with a strong focus on building scalable web applications and
-              clean, maintainable systems.
+              with 3+ years building production systems at TickTickTrader, a
+              fintech company. I specialize in backend architecture, distributed
+              systems, and real-time data pipelines.
             </p>
             <p>
-              I enjoy working across the stack — from designing intuitive user
-              interfaces to implementing robust{' '}
+              At TickTickTrader, I worked across the stack — building React
+              frontends, architecting{' '}
               <span className="text-slate-200 font-medium border-b border-primary/50">
-                backend APIs
-              </span>{' '}
-              and{' '}
+                Node.js APIs
+              </span>
+              , designing data pipelines, and managing{' '}
               <span className="text-slate-200 font-medium border-b border-primary/50">
-                system architecture.
+                real-time systems.
               </span>{' '}
-              I care deeply about code quality, performance, and long-term
-              maintainability.
+              I learned that great backend engineering means obsessing over
+              performance, reliability, and scalability. I care deeply about
+              code quality and systems that don’t break at 2 AM.
             </p>
             <p>
-              Over time, I’ve worked in different environments, which taught me
-              how to adapt quickly, collaborate effectively, and deliver
-              reliable software in real-world constraints.
+              I’ve also worked as a freelancer building Discord bots with
+              external API integrations, trained at{' '}
+              <span className="text-slate-200 font-medium border-b border-primary/50">
+                1337 School (42 Network)
+              </span>
+              , and completed coursework in system design and distributed
+              systems. Each experience reinforced one thing: shipping reliable
+              code beats perfect code.
             </p>
             <p>
               My engineering philosophy is simple:{' '}
               <strong className="text-white">
                 Build it right, keep it simple.
               </strong>{' '}
-              write code that your future self (and your teammates) will thank
-              you for.
+              I write code that scales, code that’s readable six months later,
+              and code that doesn’t wake me up at 2 AM with an outage.
             </p>
           </div>
           <div className="relative group">
