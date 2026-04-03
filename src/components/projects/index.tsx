@@ -1,152 +1,123 @@
 import type { Project } from '@/tools/types/project'
-// import FeaturedProjectCard from './ProjectCard'
-import CompactProjectRow from './compactProject'
-import FeaturedProjectsSlider from './projectsSlider'
+import FeaturedProjectCard from './ProjectCard'
 
 const PROJECTS: Project[] = [
   {
-    id: 'omnidash',
+    id: 'microshop',
     type: 'featured',
-    title: 'OmniDash',
-    subtitleTag: 'Analytics Platform',
-    role: 'Lead Frontend Engineer',
-    highlight: 'Event-Driven Architecture',
+    status: 'completed',
+    title: 'Microshop',
+    subtitleTag: 'Microservices E-Commerce Platform',
+    highlight: '9-Service Microservices Architecture',
     description:
-      'A real-time analytics dashboard designed for high-volume e-commerce data. It processes 10k+ events/sec and provides actionable insights through dynamic visualizations.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3UPLqepXltZVwt2ygor-YtefLCL-CPDH11ImdliyGCbW5NmUNiBUvuh8jNefp7YIKzKrXEZ2b_GhUhjXsqyjbmTEg-ZO3gE6gV6O5N4JWYb5wyywXTf9eYfVfAAlrfqSxWRCIY8onQMUfneIVOiBh-2-Osv73xlK_N8zFPOfDvVZXU7P7BoZCgBVG1cshu93kGp8CBJQJ7Sr5tLpQ1z9ttV9sGwOEiHZ1j3OQqTehL2kabq0Q1yDKyBF2hsjf0kxJutHM3AjFHI4',
-      alt: 'Dashboard analytics interface showing charts and graphs',
-    },
-    tech: ['React', 'D3.js', 'Firebase'],
-    cta: { label: 'View Case Study', onClickHref: '#' },
-    links: [
-      { kind: 'github', href: '#' },
-      { kind: 'live', href: '#' },
+      'A fully distributed e-commerce backend built with 9 independent Micronaut services, each handling a dedicated domain — products, orders, payments, auth, notifications, and more.',
+    tech: ['Micronaut', 'Java', 'Oracle DB', 'Docker', 'Reactive', 'JWT', 'REST APIs', 'Testing'],
+    bullets: [
+      'Designed service boundaries and inter-service communication using REST and messaging.',
+      'Implemented JWT-based authentication and authorization across all services.',
+      'Used reactive programming (RxJava) for non-blocking I/O and high-throughput endpoints.',
+      'Containerized all services with Docker and orchestrated with Docker Compose.',
+      'Integrated Oracle DB with optimized schema design per service domain.',
+      'Covered core flows with unit and integration tests for reliability.',
     ],
+    cta: { label: 'View on GitHub', onClickHref: 'https://github.com/mokhames/microshop' },
+    links: [{ kind: 'github', href: 'https://github.com/mokhames/microshop' }],
   },
   {
-    id: 'omnidash',
+    id: 'ft_transcendence',
     type: 'featured',
-    title: 'OmniDash',
-    subtitleTag: 'Analytics Platform',
-    role: 'Lead Frontend Engineer',
-    highlight: 'Event-Driven Architecture',
+    status: 'completed',
+    title: 'ft_transcendence',
+    subtitleTag: 'Full-Stack Web Application',
+    highlight: 'Real-Time Multiplayer + WebSockets',
     description:
-      'A real-time analytics dashboard designed for high-volume e-commerce data. It processes 10k+ events/sec and provides actionable insights through dynamic visualizations.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3UPLqepXltZVwt2ygor-YtefLCL-CPDH11ImdliyGCbW5NmUNiBUvuh8jNefp7YIKzKrXEZ2b_GhUhjXsqyjbmTEg-ZO3gE6gV6O5N4JWYb5wyywXTf9eYfVfAAlrfqSxWRCIY8onQMUfneIVOiBh-2-Osv73xlK_N8zFPOfDvVZXU7P7BoZCgBVG1cshu93kGp8CBJQJ7Sr5tLpQ1z9ttV9sGwOEiHZ1j3OQqTehL2kabq0Q1yDKyBF2hsjf0kxJutHM3AjFHI4',
-      alt: 'Dashboard analytics interface showing charts and graphs',
-    },
-    tech: ['React', 'D3.js', 'Firebase'],
-    cta: { label: 'View Case Study', onClickHref: '#' },
-    links: [
-      { kind: 'github', href: '#' },
-      { kind: 'live', href: '#' },
+      'Complete full-stack web application built as part of the 1337 School (42 Network) curriculum. Delivered as a group project with real-time features and modern authentication.',
+    tech: ['Web Dev', 'Full-Stack', 'WebSockets', 'MVC', 'Authentication', 'Real-time'],
+    bullets: [
+      'Developed both frontend and backend layers within a collaborative team environment.',
+      'Implemented real-time game and chat features using WebSockets.',
+      'Built user authentication with OAuth2 and JWT session handling.',
+      'Designed responsive UI with a focus on accessibility and UX.',
+      'Followed MVC architecture with clean separation of concerns.',
     ],
+    cta: { label: 'View on GitHub', onClickHref: 'https://github.com/mokhames/ft_transcendence' },
+    links: [{ kind: 'github', href: 'https://github.com/mokhames/ft_transcendence' }],
   },
   {
-    id: 'omnidash',
+    id: 'webserv',
     type: 'featured',
-    title: 'OmniDash',
-    subtitleTag: 'Analytics Platform',
-    role: 'Lead Frontend Engineer',
-    highlight: 'Event-Driven Architecture',
+    status: 'completed',
+    title: 'webserv',
+    subtitleTag: 'Custom HTTP Server Implementation',
+    highlight: 'Built from Scratch in C++',
     description:
-      'A real-time analytics dashboard designed for high-volume e-commerce data. It processes 10k+ events/sec and provides actionable insights through dynamic visualizations.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3UPLqepXltZVwt2ygor-YtefLCL-CPDH11ImdliyGCbW5NmUNiBUvuh8jNefp7YIKzKrXEZ2b_GhUhjXsqyjbmTEg-ZO3gE6gV6O5N4JWYb5wyywXTf9eYfVfAAlrfqSxWRCIY8onQMUfneIVOiBh-2-Osv73xlK_N8zFPOfDvVZXU7P7BoZCgBVG1cshu93kGp8CBJQJ7Sr5tLpQ1z9ttV9sGwOEiHZ1j3OQqTehL2kabq0Q1yDKyBF2hsjf0kxJutHM3AjFHI4',
-      alt: 'Dashboard analytics interface showing charts and graphs',
-    },
-    tech: ['React', 'D3.js', 'Firebase'],
-    cta: { label: 'View Case Study', onClickHref: '#' },
-    links: [
-      { kind: 'github', href: '#' },
-      { kind: 'live', href: '#' },
+      'A fully functional HTTP/1.1 server implemented in C++ from scratch — no external HTTP libraries. Handles multiple concurrent clients, CGI execution, and static file serving.',
+    tech: ['C++', 'HTTP', 'Sockets', 'Network', 'System Programming'],
+    bullets: [
+      'Implemented the HTTP/1.1 protocol including GET, POST, and DELETE methods.',
+      'Used non-blocking I/O with select() for concurrent multi-client handling.',
+      'Supported CGI execution for dynamic content generation.',
+      'Handled MIME types, error pages, and chunked transfer encoding.',
+      'Parsed nginx-style configuration files for flexible server setup.',
     ],
+    cta: { label: 'View on GitHub', onClickHref: '#' },
+    links: [{ kind: 'github', href: '#' }],
   },
   {
-    id: 'omnidash',
+    id: 'discord-bot',
     type: 'featured',
-    title: 'OmniDash',
-    subtitleTag: 'Analytics Platform',
-    role: 'Lead Frontend Engineer',
-    highlight: 'Event-Driven Architecture',
+    status: 'completed',
+    title: 'Discord Moderation Bot',
+    subtitleTag: 'Multi-Feature Bot with Slash Commands',
+    highlight: 'Moderation + Giveaway System',
     description:
-      'A real-time analytics dashboard designed for high-volume e-commerce data. It processes 10k+ events/sec and provides actionable insights through dynamic visualizations.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3UPLqepXltZVwt2ygor-YtefLCL-CPDH11ImdliyGCbW5NmUNiBUvuh8jNefp7YIKzKrXEZ2b_GhUhjXsqyjbmTEg-ZO3gE6gV6O5N4JWYb5wyywXTf9eYfVfAAlrfqSxWRCIY8onQMUfneIVOiBh-2-Osv73xlK_N8zFPOfDvVZXU7P7BoZCgBVG1cshu93kGp8CBJQJ7Sr5tLpQ1z9ttV9sGwOEiHZ1j3OQqTehL2kabq0Q1yDKyBF2hsjf0kxJutHM3AjFHI4',
-      alt: 'Dashboard analytics interface showing charts and graphs',
-    },
-    tech: ['React', 'D3.js', 'Firebase'],
-    cta: { label: 'View Case Study', onClickHref: '#' },
-    links: [
-      { kind: 'github', href: '#' },
-      { kind: 'live', href: '#' },
+      'A feature-rich Discord bot combining server moderation and giveaway management in a single deployment. Built for real client servers with external API integrations.',
+    tech: ['Node.js', 'Discord.js', 'Slash Commands', 'APIs', 'Cron Jobs'],
+    bullets: [
+      'Implemented slash commands for moderation actions: ban, kick, mute, warn, and logs.',
+      'Built anti-spam detection with configurable thresholds and auto-moderation.',
+      'Created a giveaway system with cron-based scheduling and winner selection.',
+      'Integrated external APIs for enriched bot responses and data lookups.',
+      'Deployed with persistent storage for user infraction history.',
     ],
+    cta: { label: 'View on GitHub', onClickHref: '#' },
+    links: [{ kind: 'github', href: '#' }],
   },
   {
-    id: 'shopflow',
+    id: 'portfolio-crm',
     type: 'featured',
-    title: 'ShopFlow API',
-    subtitleTag: 'API Infrastructure',
-    role: 'Backend Architect',
-    highlight: 'Headless Architecture',
+    status: 'in-progress',
+    title: 'Portfolio CRM',
+    subtitleTag: 'Full-Stack CRM Application',
+    highlight: 'FastAPI Backend — API-Driven Architecture',
     description:
-      'A robust, headless e-commerce API built for massive scalability. Features include multi-tenant support, automated inventory syncing, and secure payment processing.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQXkz1GGX5Dc1fsqwADRt0NUtp5IXdbK8Sehk3Y9bUVV5uXlQNdG0oPvLla4XvtoHCbGzmSzt4P009baZMzF_675UE-uXA1YxRP_SSDgZ2b09tAF6A_JZfUkaHVP_aWXjkVDyGAnYxRVfc636gNn0uNVCw50S95gDRGO7LusysdKies_eEDMu5DaXHRD-oWJiDEaB9C2LAbZ-ZBDdSIEUhjxtVW7Y0mPA5BWrnMI-b3fmDoL5w8WutSn2uROWK_slYxYE3oRPsJ2s',
-      alt: 'E-commerce shopping cart interface on mobile',
-    },
-    tech: ['Node.js', 'PostgreSQL', 'Docker'],
-    cta: { label: 'View Architecture', onClickHref: '#' },
-    links: [
-      { kind: 'github', href: '#' },
-      { kind: 'live', href: '#' },
+      'A CRM application powering this portfolio with dynamic data management. Currently transitioning to a fully API-driven architecture with a FastAPI backend.',
+    tech: ['FastAPI', 'Python', 'REST APIs', 'Database', 'Full-Stack'],
+    bullets: [
+      'Designing a RESTful API with FastAPI for portfolio content management.',
+      'Implementing database schema for projects, experiences, and contact submissions.',
+      'Building authentication for secure admin access to the CRM dashboard.',
+      'Transitioning frontend to consume dynamic data from the API layer.',
     ],
-  },
-  {
-    id: 'connectify',
-    type: 'compact',
-    title: 'Connectify',
-    subtitleTag: 'Side Project',
-    role: 'Full Stack Developer',
-    highlight: 'Realtime Features',
-    description:
-      'Professional social networking graph with real-time features.',
-    image: {
-      src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3AyLyangAwt9BjD_h-Wp51ARKCo4Pv6fL5nVC_09SbUmoMykXU0iLAkwGa-uTlF1Cuw_bkzktmxfZVF5CoksTQzzD64Uo3quS6MsyCJCXzaGkw-qXG09pcISsH6xUFP7wJNrAwKheKZML35SH5IQRgCyaEcWWVOkiz1pVsyCZqirqnQDrIMlksXVotKPC7hXnjAYXtvHFTP3zPX2pMAIfg01h-jzlQ7H2xn79oBlb1jwxFJsX1CxZM8gIet22AfE3pwxBIoAr_nE',
-      alt: 'Social media app interface showing user feed',
-    },
-    tech: ['Vue.js', 'AWS'],
-    cta: { label: 'View Project', onClickHref: '#' },
+    cta: { label: 'View on GitHub', onClickHref: 'https://github.com/mokhames/portfolio-crm' },
+    links: [{ kind: 'github', href: 'https://github.com/mokhames/portfolio-crm' }],
   },
 ]
 
 export default function Projects() {
-  const featured = PROJECTS.filter((p) => p.type === 'featured')
-  const compact = PROJECTS.filter((p) => p.type === 'compact')
-
   return (
     <section className="py-32 bg-surface-dark/20" id="projects">
-      <div className=" mx-auto px-6">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className="text-3xl  font-bold mb-16 flex items-center gap-4">
-            <span className="text-primary text-2xl font-mono">04.</span>
-            Featured Projects
-          </h2>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 className="text-3xl font-bold mb-16 flex items-center gap-4">
+          <span className="text-primary text-2xl font-mono">04.</span>
+          Featured Projects
+        </h2>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {PROJECTS.map((p) => (
+            <FeaturedProjectCard key={p.id} p={p} />
+          ))}
         </div>
-
-        {/* 🔥 SLIDER INSTEAD OF GRID */}
-        <FeaturedProjectsSlider projects={featured} />
-
-        {/* Compact projects unchanged */}
-        {compact.length ? (
-          <div className="mt-16 max-w-2xl mx-auto space-y-4">
-            {compact.map((p) => (
-              <CompactProjectRow key={p.id} p={p} />
-            ))}
-          </div>
-        ) : null}
       </div>
     </section>
   )
